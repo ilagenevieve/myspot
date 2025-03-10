@@ -1,0 +1,24 @@
+{
+  "name": "myspot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilagenevieve/myspot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilagenevieve/myspot/issues"
+  },
+  "homepage": "https://github.com/ilagenevieve/myspot#readme",
+  "description": "",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

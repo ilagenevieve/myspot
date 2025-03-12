@@ -3,25 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My First Website</title>
-  <!-- Link to an external CSS file -->
+  <title>Ila's Ocean Wonderland</title>
+  <!-- Link to the external CSS file -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
   <header>
-    <h1>Welcome to MySpot!</h1>
+    <!-- Bubbles will be added dynamically by JavaScript -->
+    <h1>Ila's Ocean Wonderland</h1>
+    
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#friends">Friends</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <p>Hello world! I'm Ila. This is my first webpage.</p>
-    <button id="clickMeBtn">Click Me!</button>
+    <section id="about" class="welcome-section">
+      <h2 class="welcome-heading">Welcome to My Underwater World!</h2>
+      <p class="bio">
+        Hello world! I'm Ila, a 12-year-old girl with big dreams and creative ideas. 
+        This is my space to share all the cool projects I'm working on, games I love to play, 
+        and adventures I go on with my friends. I'm passionate about oceans, their creatures, 
+        and making the world a better place!
+      </p>
+      <p>
+        When I'm not coding or designing, you'll find me drawing, reading about sea creatures, 
+        or playing with my friends. I believe that being creative and curious can lead to amazing discoveries!
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2 class="welcome-heading">My Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <div class="card-image" style="background-color: #bde0fe;"></div>
+          <div class="card-content">
+            <span class="coming-soon">Coming Soon</span>
+            <h3 class="card-title">Sea Creature Encyclopedia</h3>
+            <p>A collection of facts and drawings about my favorite ocean animals. Learn about whales, dolphins, octopuses, and more!</p>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="card-image" style="background-color: #a2d2ff;"></div>
+          <div class="card-content">
+            <span class="coming-soon">Coming Soon</span>
+            <h3 class="card-title">Ocean Adventure Game</h3>
+            <p>Help a friendly dolphin navigate through the ocean, collect treasures, and avoid pollution. An exciting game for all my friends!</p>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="card-image" style="background-color: #cdb4db;"></div>
+          <div class="card-content">
+            <span class="coming-soon">Coming Soon</span>
+            <h3 class="card-title">Creative Art Gallery</h3>
+            <p>A showcase of my drawings, paintings, and digital art. Most of them feature ocean themes and underwater adventures!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <button id="surpriseBtn" class="fancy-button">Click For a Surprise!</button>
   </main>
 
   <footer>
-    <p>© 2025 MySpot</p>
+    <div class="footer-content">
+      <p>© 2025 Ila's Ocean Wonderland | All Rights Reserved</p>
+      <div class="social-links">
+        <div class="social-icon">★</div>
+        <div class="social-icon">♥</div>
+        <div class="social-icon">✿</div>
+      </div>
+    </div>
+    <!-- Bubbles will be added dynamically by JavaScript -->
   </footer>
+  
+  <button class="theme-switch" id="themeToggle">🌙</button>
 
-  <!-- Link to a JavaScript file -->
+  <!-- Link to the JavaScript files -->
+  <script src="js/animations.js"></script>
+  <script src="js/theme.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

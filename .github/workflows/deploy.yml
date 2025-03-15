@@ -1,18 +1,14 @@
-name: Deploy Website
-   on:
-     push:
-       branches: [ main ]
-   jobs:
-     deploy:
-       runs-on: ubuntu-latest
-       steps:
-         - name: Deploy via SSH
-           uses: appleboy/ssh-action@v0.1.7
-           with:
-             host: ${{ secrets.HOST_IP }}
-             port: ${{ secrets.SSH_PORT }}
-             username: deploy
-             key: ${{ secrets.DEPLOY_KEY }}
-             script: |
-               cd /var/www/ila.jefahnierocks.com
-               git pull
+name: Deploy Ila's Ocean Wonderland
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    uses: verlyn13/kids-deploy-actions/.github/workflows/deploy.yml@main
+    with:
+      build_command: 'npm install && npm run build'
+      build_output_dir: 'dist'
+      remote_target_dir: '/var/www/kidsites/ila'
+    secrets: inherit

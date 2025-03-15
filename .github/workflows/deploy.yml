@@ -12,3 +12,6 @@ jobs:
       build_output_dir: 'dist'
       remote_target_dir: '/var/www/kidsites/ila'
     secrets: inherit
+    permissions:
+      actions: read
+      contents: read

@@ -9,8 +9,8 @@
 # Exit on error and enable debug output
 set -e
 
-# Set a timeout for commands (30 seconds)
-export TIMEOUT=30
+# Set a timeout for commands (120 seconds)
+export TIMEOUT=120
 
 # Function to run commands with timeout
 run_with_timeout() {

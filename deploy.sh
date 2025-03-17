@@ -122,7 +122,7 @@ echo "🐢 Copying build files to temporary location: $TEMP_DIR"
 cp -r dist/* $TEMP_DIR/
 
 # Check if deploy branch exists
-if run_with_timeout git show-ref --verify --quiet refs/heads/deploy; then
+if git show-ref --verify --quiet refs/heads/deploy; then
   echo "🦭 Deploy branch exists. Updating..."
   run_with_timeout git checkout deploy || {
     echo "🚨 Failed to checkout deploy branch. Exiting."

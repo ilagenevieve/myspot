@@ -4,7 +4,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "live-server ."
+    "start": "live-server .",
+    "clean": "rimraf dist",
+    "build:html": "mkdir -p dist && html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype index.html -o dist/index.html",
+    "build:css": "mkdir -p dist/css && cleancss -o dist/css/style.css css/style.css",
+    "build:js": "mkdir -p dist/js && terser js/animations.js -o dist/js/animations.js && terser js/theme.js -o dist/js/theme.js && terser js/script.js -o dist/js/script.js",
+    "build:assets": "mkdir -p dist/assets && cp -r assets/* dist/assets/ 2>/dev/null || :",
+    "build": "npm run clean && npm run build:html && npm run build:css && npm run build:js && npm run build:assets",
+    "preview": "live-server dist",
+    "deploy": "echo \"Deploying to production...\" && npm run build"
   },
   "repository": {
     "type": "git",
@@ -19,6 +27,10 @@
   "homepage": "https://github.com/ilagenevieve/myspot#readme",
   "description": "",
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "clean-css-cli": "^5.6.2",
+    "html-minifier": "^4.0.0",
+    "live-server": "^1.2.2",
+    "rimraf": "^5.0.1",
+    "terser": "^5.19.2"
   }
 }

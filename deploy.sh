@@ -33,7 +33,7 @@ cleanup() {
   exit 1
 }
 
-trap cleanup INT TERM EXIT
+trap cleanup INT TERM
 
 # Display welcome message
 echo "🌊 ================================================== 🌊"
